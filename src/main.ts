@@ -21,7 +21,7 @@ const mathfields = [
 mathfields.forEach(f => {
   // f.setOptions({}) // 1. doesn't break when called before render
   app.appendChild(f)
-  f.setOptions({}) // 2. breaks when called after render or before makeSharedVirtualKeyboard call
+  f.setOptions({}) // 2. breaks when called after render and before makeSharedVirtualKeyboard call
 })
 
 
