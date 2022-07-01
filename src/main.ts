@@ -18,15 +18,6 @@ const mathfields = [
   new Mathlive.MathfieldElement(defaultOptions)
 ]
 
-mathfields.forEach(f => {
-  // f.setOptions({}) // 1. doesn't break when called before render
-  app.appendChild(f)
-  f.setOptions({}) // 2. breaks when called after render and before makeSharedVirtualKeyboard call
-})
-
+mathfields.forEach(f => app.appendChild(f))
 
 Mathlive.makeSharedVirtualKeyboard({})
-
-// 3. doesn't break when called after makeSharedVirtualKeyboard
-// mathfields.forEach(f => f.setOptions({}))
-// mathfields[0].setOptions({})
