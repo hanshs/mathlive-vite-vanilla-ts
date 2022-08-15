@@ -1,32 +1,17 @@
-import * as Mathlive from 'mathlive'
+import "mathlive/dist/mathlive-fonts.css";
+import "mathlive/dist/mathlive-static.css";
+import "./style.css";
 
-import 'mathlive/dist/mathlive-fonts.css';
-import 'mathlive/dist/mathlive-static.css';
-import './style.css'
+import decimalSeparatorExample from "./decimal-separator-example";
+// import sharedKeyboardsExample from "./shared-keyboards-example";
 
-const app = document.querySelector<HTMLDivElement>('#app')!
+import text from "./text";
 
-const defaultOptions: Partial<Mathlive.MathfieldOptions> = {
-  plonkSound: 'none',
-  keypressSound: 'none',
-  virtualKeyboardMode: 'onfocus'
-}
+const app = document.querySelector<HTMLDivElement>("#app")!;
 
-const mathfields = [
-  new Mathlive.MathfieldElement(defaultOptions),
-  new Mathlive.MathfieldElement(defaultOptions),
-  new Mathlive.MathfieldElement(defaultOptions)
-]
+text(app, "h4", `Decimal separator option set to ","`);
+text(app, "p", `Type "1,5" or "25,5" and see console.log for output`);
+decimalSeparatorExample(app);
 
-mathfields.forEach(f => {
-  // f.setOptions({}) // 1. doesn't break when called before render
-  app.appendChild(f)
-  f.setOptions({}) // 2. breaks when called after render and before makeSharedVirtualKeyboard call
-})
-
-
-Mathlive.makeSharedVirtualKeyboard({})
-
-// 3. doesn't break when called after makeSharedVirtualKeyboard
-// mathfields.forEach(f => f.setOptions({}))
-// mathfields[0].setOptions({})
+// heading(app, "Shared keyboards example");
+// sharedKeyboardsExample(app);

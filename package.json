@@ -12,6 +12,6 @@
     "vite": "^2.9.9"
   },
   "dependencies": {
-    "mathlive": "^0.76.1"
+    "mathlive": "^0.77.0"
   }
 }
