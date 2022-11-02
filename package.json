@@ -12,6 +12,7 @@
     "vite": "^2.9.9"
   },
   "dependencies": {
-    "mathlive": "^0.77.0"
+    "@cortex-js/compute-engine": "^0.7.0",
+    "mathlive": "^0.84.0"
   }
 }

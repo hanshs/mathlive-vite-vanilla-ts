@@ -8,9 +8,8 @@ const options: Partial<Mathlive.MathfieldOptions> = {
 };
 
 export default function (node: HTMLDivElement) {
-  text(node, "h4", "Shared keyboard example");
-
-  Mathlive.makeSharedVirtualKeyboard({});
+  text(node, "p", `Focus the mathfields one-by-one in a touch-enabled environment, notice how multiple fields get focus`);
+  text(node, "small", `It doesn't happen, when focusing on the padding part of mathfield`);
 
   const mathfields = [
     new Mathlive.MathfieldElement(options),
@@ -18,5 +17,8 @@ export default function (node: HTMLDivElement) {
     new Mathlive.MathfieldElement(options),
   ];
 
-  mathfields.forEach((f) => node.appendChild(f));
+  mathfields.forEach((f) => {
+    f.classList.add("mathfield--big-padding");
+    node.appendChild(f);
+  });
 }

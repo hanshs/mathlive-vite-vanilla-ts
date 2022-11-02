@@ -12,5 +12,10 @@
 
 math-field {
   border: 1px solid salmon;
+  background-color: bisque;
   max-width: 300px;
+}
+
+.mathfield--big-padding {
+  padding: 5px 15px;
 }
