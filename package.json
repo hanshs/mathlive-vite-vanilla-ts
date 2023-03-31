@@ -8,11 +8,11 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "typescript": "^4.5.4",
-    "vite": "^2.9.9"
+    "typescript": "^5.0.3",
+    "vite": "^4.2.1"
   },
   "dependencies": {
-    "@cortex-js/compute-engine": "^0.7.0",
-    "mathlive": "^0.84.0"
+    "@cortex-js/compute-engine": "^0.12.2",
+    "mathlive": "^0.90.10"
   }
 }

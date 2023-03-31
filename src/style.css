@@ -13,7 +13,7 @@
 math-field {
   border: 1px solid salmon;
   background-color: bisque;
-  max-width: 300px;
+  display: block;
 }
 
 .mathfield--big-padding {

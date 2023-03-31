@@ -2,13 +2,6 @@ import { ComputeEngine } from "@cortex-js/compute-engine";
 import * as Mathlive from "mathlive";
 import text from "./text";
 
-const options: Partial<Mathlive.MathfieldOptions> = {
-  decimalSeparator: ",",
-  plonkSound: "none",
-  keypressSound: "none",
-  virtualKeyboardMode: "manual",
-};
-
 const ce = new ComputeEngine();
 ce.latexOptions = { decimalMarker: "{,}" };
 
@@ -16,7 +9,7 @@ export default function (node: HTMLDivElement) {
   text(node, "h4", `Decimal separator option set to ","`);
   text(node, "p", `Type "1,5" or "25,5" and see console.log for output`);
 
-  const mathfield = new Mathlive.MathfieldElement(options);
+  const mathfield = new Mathlive.MathfieldElement();
 
   const logOutput = (e: any) => {
     console.log(mathfield.getValue(), e.target.value, e.target.getValue(), e.currentTarget.value, e.currentTarget.getValue());
