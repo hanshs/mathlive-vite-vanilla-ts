@@ -13,6 +13,7 @@ export default function (node: HTMLDivElement) {
   ];
 
   mathfields.forEach((f) => {
+    f.addEventListener('focus', () => window.mathVirtualKeyboard.show());
     // f.mathVirtualKeyboardPolicy = 'auto'
     node.appendChild(f);
   });
